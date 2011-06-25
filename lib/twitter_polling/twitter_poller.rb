@@ -3,10 +3,10 @@ require 'tweet_processor'
 module Twitter
   class Poller
     
-    def self.search(term)
+    def self.search(term, ignore_last_known_id=false)
       search_result, client = poll_search(term)
       
-      if TwitterPolling.first(:order => :created_at.desc)
+      if ignore_last_known_id or TwitterPolling.first(:order => :created_at.desc)
         last_known_tweet_id = TwitterPolling.first(:order => :created_at.desc).latest_id
       else
         last_known_tweet_id = "0"
