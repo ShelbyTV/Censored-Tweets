@@ -7,7 +7,9 @@
 
 
 <% if current_user %>  
-  Welcome, <%= current_user.name %>!  
+  Welcome, <%= current_user.name %>! <br />
+  <%= current_user.points %> points <br />
+  <%= current_user.votes_received %> votes received <br /> 
 <% else %>  
   <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
 <% end %>
