@@ -1,0 +1,24 @@
+defaults: &defaults
+  name: "Censored Tweets"
+  twitter_consumer_key: 
+  twitter_consumer_secret: 
+  mongo_server: 'localhost'
+  mongo_port: 27017
+  mongo_pool_size: 40
+
+development:
+  domain: localhost:3000
+  <<: *defaults
+
+test:
+  domain: test.host
+  <<: *defaults
+
+staging:
+  domain: stage.censoredtweets.com
+  <<: *defaults
+
+production:
+  domain: censoredtweets.com
+  <<: *defaults
+  
