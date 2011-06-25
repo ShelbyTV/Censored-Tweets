@@ -28,6 +28,9 @@ class User
   key :gender,      String
   key :timezone,    String
   
+  # Game Mechanics, we've got em!
+  key :points,      Integer, :default => 0
+  
   timestamps!
 
 

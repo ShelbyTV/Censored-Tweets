@@ -2,14 +2,18 @@ CensoredTweets::Application.routes.draw do
   
   root :to => "tweets#index"
   
-  devise_for :users
+  devise_for :users, :skip => [:sessions] do
+    get 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
+  end
   resources :users
   
   match '/auth/:provider/callback' => 'authentications#create'
   match '/auth/failure' => 'authentications#fail'
 
   
-  resources :tweets
+  #tweets
+  match '/newest' => 'tweets#newest'
+  match '/best' => 'tweets#best'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
