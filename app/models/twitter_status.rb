@@ -40,7 +40,7 @@ class TwitterStatus
   def self.build_from_grackle(s)
     raise ArgumentError, "Must provide Grackle::TwitterStruct status object" unless s and s.is_a? Grackle::TwitterStruct
     
-    TwitterStatus.new({
+    ts = TwitterStatus.new({
       #Tweet top level
       :tweet_id => s.id,
       :in_reply_to_user_id_str => s.in_reply_to_user_id_str,
@@ -61,16 +61,18 @@ class TwitterStatus
       :in_reply_to_screen_name => s.in_reply_to_screen_name,
       :status_created_at => Time.parse(s.created_at),
       
-      #User Object
-      :user_description => s.user.description,
-      :user_id_str => s.user.id,
-      :user_location => s.user.location,
-      :user_profile_image_url => s.user.profile_image_url,
-      :user_screen_name => s.user.screen_name,
-      :user_name => s.user.name
-      
       #TODO include any other info from twitter status?
     })
+    
+    if s.user
+      #User Object
+      ts.user_description = s.user.description,
+      ts.user_id_str = s.user.id,
+      ts.user_location = s.user.location,
+      ts.user_profile_image_url = s.user.profile_image_url,
+      ts.user_screen_name = s.user.screen_name,
+      ts.user_name = s.user.name
+    end
   end
   
 end
