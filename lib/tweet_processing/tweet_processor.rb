@@ -7,6 +7,7 @@ class TweetProcessor
   
   # Pass a GrackleStruct and a GrackleClient
   def self.process_tweet(gt, c)
+    c ||= Grackle::Client.new
     t = Tweet.new
     
     t.twitter_status = TwitterStatus.build_from_grackle(gt)
@@ -35,8 +36,9 @@ class TweetProcessor
   
   def self.censored_username_from(text, c)
     #looking to pull SCREENNAME from
-    #  "#censoredtweet RT @SCREENNAME: some other bull shit"
-    matched = text.match(/RT @(\w*):/)
+    #    "#censoredtweet RT @SCREENNAME: some other bull shit"
+    # or "#censoredtweet RT @SCREENNAME some other bull shit"
+    matched = text.match(/RT @(\w*)[:\s]/)
     return nil unless matched.size == 2
     screen_name = matched[1]
     return nil unless screen_name
