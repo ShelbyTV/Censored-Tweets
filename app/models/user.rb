@@ -33,6 +33,13 @@ class User
   key :votes_received,  Integer, :default => 0
   
   timestamps!
+  
+  before_save(:on => :create) { self.initialize_points if self.new? }
+  
+  def initialize_points
+    #get points for all tweets w/ my uid
+    Tweet.with_twitter_uid(self.uid).each { |t| self.points += t.points }
+  end
 
   def has_voted_for(tweet)
     tweet and tweet.voter_user_ids.include? self.id
