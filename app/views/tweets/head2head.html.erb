@@ -9,18 +9,22 @@
 
 
 <div id="tweet_1">
-	<div class="name">
-		@<%= @tweets[0].tweeter["screen_name"] %>		
-	</div>
-	<div class="tweet">
-		<%= image_tag @tweets[0].tweeter["profile_image_url"], :class=> "avatar"%>
-		<span class="tweet-text">
-			<%= @tweets[0].twitter_status.text %>	
-		</span>
-	</div>
-	<div class="vote">
-		<%= render :partial => "tweets/upvote", :locals => { :tweet => @tweets[0] } %>
-	</div>
+  <% if @tweets[0] %>
+  	<div class="name">
+  		@<%= @tweets[0].tweeter["screen_name"] %>		
+  	</div>
+  	<div class="tweet">
+  		<%= image_tag @tweets[0].tweeter["profile_image_url"], :class=> "avatar"%>
+  		<span class="tweet-text">
+  			<%= @tweets[0].twitter_status.text %>	
+  		</span>
+  	</div>
+  	<div class="vote">
+  		<%= render :partial => "tweets/upvote", :locals => { :tweet => @tweets[0], :not_remote => true } %>
+  	</div>
+  <% else %>
+    You've voted on everything, sorry
+  <% end %>
 </div>
 
 <div id="versus">
@@ -28,16 +32,20 @@
 </div>
 
 <div id="tweet_2">
-	<div class="name">
-		@<%= @tweets[1].tweeter["screen_name"] %>		
-	</div>
-	<div class="tweet">
-		<%= image_tag @tweets[1].tweeter["profile_image_url"], :class=> "avatar"%>
-		<span class="tweet-text">
-			<%= @tweets[1].twitter_status.text %>			
-		</span>
-	</div>
-	<div class="vote">
-		<%= render :partial => "tweets/upvote", :locals => { :tweet => @tweets[1] } %>
-	</div>
+  <% if @tweets[1] %>
+  	<div class="name">
+  		@<%= @tweets[1].tweeter["screen_name"] %>		
+  	</div>
+  	<div class="tweet">
+  		<%= image_tag @tweets[1].tweeter["profile_image_url"], :class=> "avatar"%>
+  		<span class="tweet-text">
+  			<%= @tweets[1].twitter_status.text %>			
+  		</span>
+  	</div>
+  	<div class="vote">
+  		<%= render :partial => "tweets/upvote", :locals => { :tweet => @tweets[1], :not_remote => true } %>
+  	</div>
+  <% else %>
+    You've voted on everything else.  You vote alot.  Wtf.
+  <% end %>
 </div>

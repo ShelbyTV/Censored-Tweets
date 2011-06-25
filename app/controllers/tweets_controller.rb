@@ -37,8 +37,8 @@ class TweetsController < ApplicationController
     @did_vote = (@tweet ? @tweet.upvote!(current_user) : false)
     
     respond_to do |format|
-      #TODO: AJAXIFY
-      format.html { redirect_to root_path }
+      format.js
+      format.html { redirect_to head2head_path }
       format.xml  { render :xml => @tweets }
     end
   end
@@ -55,7 +55,7 @@ class TweetsController < ApplicationController
   end
   
   def head2head
-    @tweets = Tweet.two_random_tweets
+    @tweets = Tweet.two_random_tweets(current_user)
     
     respond_to do |format|
       format.html # head2head.html.erb

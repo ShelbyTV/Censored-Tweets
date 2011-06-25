@@ -21,11 +21,14 @@ class Tweet
   scope :todays_best, sort(:points => -1)
   scope :newest, sort("twitter_status.status_created_at" => -1)
   
-  def self.two_random_tweets
-    tweets = Tweet.where(:created_at => {"$gt" => Time.zone.now - 36.hours}).limit(10).all
+  def self.two_random_tweets(user)
+    tweets = Tweet.where(:created_at => {"$gt" => Time.zone.now - 36.hours})
+    tweets = tweets.where( "voter_user_ids" => { "$ne" => user.id} ) if user
+    tweets = tweets.limit(50).all
+      
     id1 = rand(tweets.size)
-    id2 = rand(tweets.size) until id2 != id1 and id2 != nil
-    return tweets[id1], tweets[id2]
+    id2 = rand(tweets.size) until id2 != id1 and id2 != nil unless tweets.size < 2
+    return tweets[id1], (id2 ? tweets[id2] : nil)
   end
   
   def initialize_points

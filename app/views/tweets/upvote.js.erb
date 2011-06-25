@@ -1,0 +1,2 @@
+$("#tweet-<%= @tweet.id %>").replaceWith( '<%= escape_javascript(render :partial => "tweets/tweet", :locals => { :tweet => @tweet }) %>' );
+$("#tweet-<%= @tweet.id %>").effect('highlight', {}, 10000);
