@@ -6,5 +6,19 @@
   <%= tweet.vote_count %> votes.
   <%= tweet.twitter_status.text %>
   <%= render :partial => "tweets/upvote", :locals => { :tweet => tweet } %>
-
+	<%= image_tag('http://si0.twimg.com/images/dev/cms/intents/icons/retweet.png', :class => "intent-retweet-"+tweet.id) %>
+	<%= image_tag('http://si0.twimg.com/images/dev/cms/intents/icons/reply.png', :class => "intent-reply-"+tweet.id) %>
+	<%= image_tag('http://si0.twimg.com/images/dev/cms/intents/icons/favorite.png', :class => "intent-favorite-"+tweet.id) %>
+	
 </div>
+
+<% content_for :javascript do -%>
+	$(".intent-retweet-<%= tweet.id %>").click(function(){
+		window.open("http://twitter.com/intent/retweet?tweet_id=<%= tweet.twitter_status.tweet_id.to_s %>",'','width=600,height=380,top=117,left=300,chrome=1,centerscreen=1,menubar=0,toolbar=0,location=0,statusbar=0,scrollbars=1');return false;});
+	$(".intent-reply-<%= tweet.id %>").click(function(){
+		window.open("http://twitter.com/intent/reply?tweet_id=<%= tweet.twitter_status.tweet_id.to_s %>",'','width=600,height=380,top=117,left=300,chrome=1,centerscreen=1,menubar=0,toolbar=0,location=0,statusbar=0,scrollbars=1');return false;});
+	$(".intent-favorite-<%= tweet.id %>").click(function(){
+		window.open("http://twitter.com/intent/favorite?tweet_id=<%= tweet.twitter_status.tweet_id.to_s %>",'','width=600,height=380,top=117,left=300,chrome=1,centerscreen=1,menubar=0,toolbar=0,location=0,statusbar=0,scrollbars=1');return false;});
+<% end -%>
+
+
