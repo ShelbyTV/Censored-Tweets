@@ -7,21 +7,4 @@
 
 <h1>Today's Best Censored Tweets</h1>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @tweets.each do |tweet| %>
-  <tr>
-    
-    <td>@<%= tweet.tweeter["screen_name"] %></td>
-    <td><%= image_tag tweet.tweeter["profile_image_url"] %></td>
-    <td><%= tweet.twitter_status.text %></td>
-    <td>TOOD: VOTEUP</td>
-  </tr>
-<% end %>
-</table>
-
+<%= render @tweets %>
