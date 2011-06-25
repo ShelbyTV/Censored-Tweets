@@ -39,7 +39,7 @@ class TweetProcessor
     #    "#censoredtweet RT @SCREENNAME: some other bull shit"
     # or "#censoredtweet RT @SCREENNAME some other bull shit"
     matched = text.match(/RT @(\w*)[:\s]/)
-    return nil unless matched.size == 2
+    return nil unless matched and matched.size == 2
     screen_name = matched[1]
     return nil unless screen_name
     c.users.show?(:screen_name => screen_name)
