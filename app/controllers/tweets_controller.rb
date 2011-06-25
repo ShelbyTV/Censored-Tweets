@@ -1,3 +1,5 @@
+require 'twitter_poller'
+
 class TweetsController < ApplicationController
 
   def index
@@ -37,6 +39,10 @@ class TweetsController < ApplicationController
       format.html # show.html.erb
       format.xml  { render :xml => @tweet }
     end
+  end
+  
+  def poll_twitter
+    @new_results = Twitter::Poller.search("#censoredtweet")
   end
 
 end
