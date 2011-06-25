@@ -38,7 +38,7 @@ class TweetProcessor
     #looking to pull SCREENNAME from
     #    "#censoredtweet RT @SCREENNAME: some other bull shit"
     # or "#censoredtweet RT @SCREENNAME some other bull shit"
-    matched = text.match(/RT @(\w*)[:\s]/)
+    matched = text.match(/RT @(\w*)[:\s]/i)
     return nil unless matched and matched.size == 2
     screen_name = matched[1]
     return nil unless screen_name

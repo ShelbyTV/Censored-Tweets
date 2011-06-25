@@ -1,0 +1,51 @@
+@import "compass/reset";
+
+#versus {
+	position:absolute;
+	left: 48%;
+	top: 148px;
+	font-size: 30px;
+}
+#tweet_1 { 
+	position: absolute;
+	left: 10%;
+	width: 30%;
+	margin: 20px;
+	padding: 10px;
+	background: lightBlue;
+}
+
+#tweet_2 {
+	position: absolute; 
+	right: 10%;
+	width: 30%;
+	margin: 20px;
+	padding: 10px;
+	background: lightBlue;
+}
+
+.avatar {
+	width: 48px;
+	margin-right: 10px;
+	position: relative;
+}
+
+.tweet {
+	position: relative;
+	margin:20px 10px;
+	
+}
+
+.tweet .tweet-text{
+	position: absolute;
+}
+
+.name {
+	font-size: 20px;
+	text-align: center;
+}
+
+.vote {
+	margin: 10px 0px;
+	text-align: center;
+}

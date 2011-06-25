@@ -21,6 +21,11 @@ gem 'omniauth'
 #
 gem "grackle" 		# twitter
 
+#
+# ---------- CSS
+#
+gem "compass"
+gem "sass"
 
 #
 # ---------- External Services
