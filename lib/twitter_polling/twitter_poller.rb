@@ -13,6 +13,7 @@ module Twitter
       new_results = []
       search_result.each do |r|
         if r.id_str > last_known_tweet_id
+          puts r.id_str
           new_results << r
         end
       end

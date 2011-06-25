@@ -1,0 +1,11 @@
+<div style="text-align:center;">
+	<h1>Polling Twitter for new search results...</h1>
+	<hr/>
+	<h1>Just found <%= @new_results.count %> new tweets</h1>
+</div>
+
+<% content_for :javascript do -%>
+	$(document).ready(function(){
+		setTimeout(function(){location.reload(true);},10000);
+	});
+<% end -%>
