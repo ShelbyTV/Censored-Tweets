@@ -1,7 +1,16 @@
 class TweetsController < ApplicationController
 
+  def index
+    @tweets = Tweet.todays_best.limit(33).all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @tweets }
+    end
+  end
+
   def newest
-    @tweets = Tweet.limit(33).all
+    @tweets = Tweet.newest.limit(33).all
 
     respond_to do |format|
       format.html # index.html.erb

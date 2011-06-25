@@ -34,6 +34,10 @@ class User
   timestamps!
 
 
+  def self.add_points_to_user_by_uid(twitter_uid, points)
+    User.collection.update({ 'uid' => twitter_uid}, { '$inc' => {'points' => points} })
+  end
+
   def self.build_from_omniauth(omniauth)
     raise ArgumentError, "Must have credentials and user info" unless (omniauth.has_key?('credentials') and omniauth.has_key?('user_info'))
     
