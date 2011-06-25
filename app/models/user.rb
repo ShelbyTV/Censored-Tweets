@@ -29,13 +29,21 @@ class User
   key :timezone,    String
   
   # Game Mechanics, we've got em!
-  key :points,      Integer, :default => 0
+  key :points,          Integer, :default => 0
+  key :votes_received,  Integer, :default => 0
   
   timestamps!
 
+  def has_voted_for(tweet)
+    tweet and tweet.voter_user_ids.include? self.id
+  end
 
-  def self.add_points_to_user_by_uid(twitter_uid, points)
-    User.collection.update({ 'uid' => twitter_uid}, { '$inc' => {'points' => points} })
+  def self.add_points_to_user_by_uid(twitter_uid, points, increment_votes_received_by=1)
+    User.collection.update({ 'uid' => twitter_uid}, { '$inc' => {'points' => points, 'votes_received' => increment_votes_received_by} })
+  end
+  
+  def self.decay_points!
+    User.all.each { |u| u.update_attribute(:points, [u.points/2, 3].max) }
   end
 
   def self.build_from_omniauth(omniauth)

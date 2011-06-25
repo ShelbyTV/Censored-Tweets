@@ -1,17 +1,21 @@
-<h1>YESTREDAYS WINNER</h1>
-TODO
+<% if @winner %>
+  <h1>YESTREDAYS WINNER</h1>
+  <%= render :partial => "winners/show", %>
 
-<hr />
+  <hr />
+<% end -%>
 
 
 <% if current_user %>  
-  Welcome, <%= current_user.name %>!  
+  Welcome, <%= current_user.name %>! <br />
+  <%= current_user.points %> points <br />
+  <%= current_user.votes_received %> votes received <br /> 
 <% else %>  
   <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
 <% end %>
 
 
-<h1>Newest Censored Tweets</h1>
+<h1>Best Censored Tweets</h1>
 
 <table>
   <tr>
@@ -26,8 +30,9 @@ TODO
     <td>@<%= tweet.tweeter["screen_name"] %></td>
     <td><%= image_tag tweet.tweeter["profile_image_url"] %></td>
     <td><%= tweet.points %></td>
+    <td>votes:<%= tweet.vote_count %></td>
     <td><%= tweet.twitter_status.text %></td>
-    <td>TOOD: VOTEUP</td>
+    <td><%= render :partial => "tweets/upvote", :locals => { :tweet => tweet } %></td>
   </tr>
 <% end %>
 </table>

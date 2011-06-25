@@ -7,6 +7,7 @@ class AuthenticationsController < ApplicationController
 
   def create
     omniauth = request.env["omniauth.auth"]
+    puts omniauth
   
     # See if we have a matching user...
     user = User.first( :conditions => { 'provider' => omniauth['provider'], 'uid' => omniauth['uid'] } )
@@ -14,7 +15,7 @@ class AuthenticationsController < ApplicationController
     
     if user                    # ---- Current user, just signing in
       # It's possible for authenication tokens to change...
-      user.update_authentication_tokens!(omniauth)
+      user.update_oauth_tokens!(omniauth)
       
       # Always remember users, onus is on them to log out
       user.remember_me!

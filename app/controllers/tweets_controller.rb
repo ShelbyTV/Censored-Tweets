@@ -1,9 +1,11 @@
 require 'twitter_poller'
 
 class TweetsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:upvote]
 
   def index
     @tweets = Tweet.todays_best.limit(33).all
+    @winner = Winner.most_recent.first
 
     respond_to do |format|
       format.html # index.html.erb
@@ -29,6 +31,17 @@ class TweetsController < ApplicationController
     end
   end
     
+  def upvote
+    @tweet = Tweet.find_by_id(params[:id])
+    
+    @did_vote = (@tweet ? @tweet.upvote!(current_user) : false)
+    
+    respond_to do |format|
+      #TODO: AJAXIFY
+      format.html { redirect_to root_path }
+      format.xml  { render :xml => @tweets }
+    end
+  end
 
   # GET /tweets/1
   # GET /tweets/1.xml
