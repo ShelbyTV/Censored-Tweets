@@ -2,7 +2,7 @@ MongoMapper.connection = Mongo::Connection.new(
   APP_CONFIG[:mongo_server], 
   APP_CONFIG[:mongo_port], 
   :pool_size => APP_CONFIG[:mongo_pool_size])
-MongoMapper.database = "ct-#{Rails.env}"
+MongoMapper.database = APP_CONFIG[:mongo_database_name]
 
 if APP_CONFIG[:mongo_username] && APP_CONFIG[:mongo_password]
   MongoMapper.database.authenticate(APP_CONFIG[:mongo_username], APP_CONFIG[:mongo_password])
