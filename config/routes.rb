@@ -15,7 +15,7 @@ CensoredTweets::Application.routes.draw do
   #tweets
   match '/newest' => 'tweets#newest'
   match '/best' => 'tweets#best'
-  match '/head2head' => 'tweets#head2head'
+  match '/head2head' => 'tweets#head2head', :as => :head2head
   match '/poll_twitter' => 'tweets#poll_twitter'
   match '/upvote/:id' => 'tweets#upvote', :as => :upvote_tweet
   

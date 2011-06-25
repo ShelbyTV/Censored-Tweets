@@ -1,9 +1,11 @@
-<% if current_user %>  
-  <% if current_user.has_voted_for(tweet) %>
-    you voted
-  <% else %>
-    <%= link_to "UPVOTE", upvote_tweet_path(tweet) %>
-  <% end -%>
-<% else %>  
-  <%= link_to "UPVOTE", "/auth/twitter?origin=#{upvote_tweet_path(tweet)}" %>  
-<% end %>
+<div id="upvote-holder-for-<%= tweet.id %>" class="upvote-holder" >
+  <% if current_user %>  
+    <% if current_user.has_voted_for(tweet) %>
+      you voted
+    <% else %>
+      <%= link_to "UPVOTE", upvote_tweet_path(tweet), :remote => local_assigns[:not_remote] ? false : true %>
+    <% end -%>
+  <% else %>  
+    <%= link_to "UPVOTE", "/auth/twitter?origin=#{upvote_tweet_path(tweet)}" %>  
+  <% end %>
+</div>

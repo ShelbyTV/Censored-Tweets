@@ -27,6 +27,12 @@ gem "grackle" 		# twitter
 gem "compass"
 gem "sass"
 
+#
+# ---------- External Services
+#
+gem 'jquery-rails', '>= 1.0.3'
+
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

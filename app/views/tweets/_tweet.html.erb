@@ -1,0 +1,10 @@
+<div class="tweet" id="tweet-<%= tweet.id %>">
+
+  @<%= tweet.tweeter["screen_name"] %>
+  <%= image_tag tweet.tweeter["profile_image_url"] %>
+  <%= tweet.points %> points.
+  <%= tweet.vote_count %> votes.
+  <%= tweet.twitter_status.text %>
+  <%= render :partial => "tweets/upvote", :locals => { :tweet => tweet } %>
+
+</div>
