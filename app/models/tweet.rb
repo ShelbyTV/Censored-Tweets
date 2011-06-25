@@ -16,6 +16,8 @@ class Tweet
   
   before_save(:on => :create) { self.calculate_points if self.new? }
   
+  scope :todays_best, sort(:points => 1)
+  
   def calculate_points
     self.points = self.tweeters_follower_count + self.censored_tweeters_follower_count
   end

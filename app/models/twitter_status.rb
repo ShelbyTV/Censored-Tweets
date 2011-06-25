@@ -2,7 +2,7 @@ class TwitterStatus
   include MongoMapper::EmbeddedDocument
   plugin MongoMapper::Plugins::Timestamps
 
-  embedded_in :Tweet
+  embedded_in :tweet
   
   #tweet top level
   key :tweet_id,                Integer
@@ -73,6 +73,8 @@ class TwitterStatus
       ts.user_screen_name = s.user.screen_name,
       ts.user_name = s.user.name
     end
+    
+    ts
   end
   
 end

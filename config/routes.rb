@@ -11,7 +11,9 @@ CensoredTweets::Application.routes.draw do
   match '/auth/failure' => 'authentications#fail'
 
   
-  resources :tweets
+  #tweets
+  match '/newest' => 'tweets#newest'
+  match '/best' => 'tweets#best'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

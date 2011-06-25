@@ -1,12 +1,12 @@
 class TweetProcessor
   
-  def self.process_tweets(grackle_tweets, grackle_client)
+  def self.process_tweets(grackle_tweets, grackle_client=nil)
     grackle_client ||= Grackle::Client.new
     grackle_tweets.each { |gt| process_tweet(gt, grackle_client) }
   end
   
   # Pass a GrackleStruct and a GrackleClient
-  def self.process_tweet(gt, c)
+  def self.process_tweet(gt, c=nil)
     c ||= Grackle::Client.new
     t = Tweet.new
     
