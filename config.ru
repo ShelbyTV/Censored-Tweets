@@ -2,3 +2,7 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run CensoredTweets::Application
+
+require 'sass/plugin/rack'
+use Sass::Plugin::Rack
+Sass::Plugin.options[:never_update] = true

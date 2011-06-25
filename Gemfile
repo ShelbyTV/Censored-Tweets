@@ -21,6 +21,11 @@ gem 'omniauth'
 #
 gem "grackle" 		# twitter
 
+#
+# ---------- CSS
+#
+gem "compass"
+gem "sass"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
