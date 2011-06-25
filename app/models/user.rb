@@ -40,6 +40,10 @@ class User
   def self.add_points_to_user_by_uid(twitter_uid, points)
     User.collection.update({ 'uid' => twitter_uid}, { '$inc' => {'points' => points} })
   end
+  
+  def self.decay_points!
+    User.all.each { |u| u.update_attribute(:points, [u.points/2, 3].max) }
+  end
 
   def self.build_from_omniauth(omniauth)
     raise ArgumentError, "Must have credentials and user info" unless (omniauth.has_key?('credentials') and omniauth.has_key?('user_info'))

@@ -1,7 +1,9 @@
-<h1>YESTREDAYS WINNER</h1>
-TODO
+<% if @winner %>
+  <h1>YESTREDAYS WINNER</h1>
+  <%= render :partial => "winners/show", %>
 
-<hr />
+  <hr />
+<% end -%>
 
 
 <% if current_user %>  

@@ -5,6 +5,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.todays_best.limit(33).all
+    @winner = Winner.most_recent.first
 
     respond_to do |format|
       format.html # index.html.erb
@@ -36,6 +37,7 @@ class TweetsController < ApplicationController
     @did_vote = (@tweet ? @tweet.upvote!(current_user) : false)
     
     respond_to do |format|
+      #TODO: AJAXIFY
       format.html { redirect_to root_path }
       format.xml  { render :xml => @tweets }
     end

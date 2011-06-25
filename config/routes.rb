@@ -2,6 +2,7 @@ CensoredTweets::Application.routes.draw do
   
   root :to => "tweets#index"
   
+  #user & auth
   devise_for :users, :skip => [:sessions] do
     get 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session
   end
@@ -16,6 +17,13 @@ CensoredTweets::Application.routes.draw do
   match '/best' => 'tweets#best'
   match '/poll_twitter' => 'tweets#poll_twitter'
   match '/upvote/:id' => 'tweets#upvote', :as => :upvote_tweet
+  
+  #winner
+  resources :winners
+  
+  
+    
+    
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
