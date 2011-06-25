@@ -5,13 +5,16 @@ defaults: &defaults
   mongo_server: 'localhost'
   mongo_port: 27017
   mongo_pool_size: 40
-
+  mongo_db_name: "ct-production"
+  
 development:
   domain: localhost:3000
+  mongo_db_name: "ct-development"
   <<: *defaults
 
 test:
   domain: test.host
+  mongo_db_name: "ct-test"
   <<: *defaults
 
 staging:
@@ -20,5 +23,10 @@ staging:
 
 production:
   domain: censoredtweets.com
+  mongo_server: "staff.mongohq.com"
+  mongo_port: 10007
+  mongo_db_name: "app578915"
+  mongo_username: "heroku"
+  mongo_password: "yihgyonou6471n2uheeqe8"
   <<: *defaults
   
