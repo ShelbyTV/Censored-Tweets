@@ -5,9 +5,5 @@ class TwitterPolling
   
   timestamps!
   
-  
-  def self.last_result
     
-  end
-  
 end
