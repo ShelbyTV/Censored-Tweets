@@ -1,4 +1,16 @@
 CensoredTweets::Application.routes.draw do
+  
+  root :to => "tweets#index"
+  
+  devise_for :users
+  resources :users
+  
+  match '/auth/:provider/callback' => 'authentications#create'
+  match '/auth/failure' => 'authentications#fail'
+
+  
+  resources :tweets
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

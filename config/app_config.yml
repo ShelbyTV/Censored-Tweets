@@ -1,7 +1,7 @@
 defaults: &defaults
   name: "Censored Tweets"
-  twitter_consumer_key: 
-  twitter_consumer_secret: 
+  twitter_consumer_key: XNCsleBNGax7h2tQK7vl7Q
+  twitter_consumer_secret: 5udErzH5pCScJE5qdy7zGhzqDtQO8zjrM2sPbo4HkU
   mongo_server: 'localhost'
   mongo_port: 27017
   mongo_pool_size: 40

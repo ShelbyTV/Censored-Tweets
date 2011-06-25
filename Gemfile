@@ -9,6 +9,19 @@ gem "mongo", ">= 1.3.1"
 gem "mongo_mapper", '>= 0.9.1'
 gem "bson_ext"
 
+#
+# ---------- User Authentication
+#
+gem 'devise', '>= 1.2'
+gem 'mm-devise', '>= 1.2'
+gem 'omniauth'
+
+#
+# ---------- External Services
+#
+gem "grackle" 		# twitter
+
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
