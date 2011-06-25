@@ -1,0 +1,9 @@
+<% if current_user %>  
+  <% if current_user.has_voted_for(tweet) %>
+    you voted
+  <% else %>
+    <%= link_to "UPVOTE", upvote_tweet_path(tweet) %>
+  <% end -%>
+<% else %>  
+  <%= link_to "UPVOTE", "/auth/twitter?origin=#{upvote_tweet_path(tweet)}" %>  
+<% end %>

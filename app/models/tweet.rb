@@ -26,13 +26,17 @@ class Tweet
     User.add_points_to_user_by_uid(self.tweeter["id_str"], self.points)
   end
   
-  def upvote(voter)
+  def upvote!(voter)
+    return false if self.voter_user_ids.include? voter.id
+    
     self.voter_user_ids << voter.id
     
-    points_to_add = (voter.points / 3.33).round
+    points_to_add = [(voter.points / 3.33).round, 7].max
     
     self.points += points_to_add
     self.points_all_time += points_to_add
+    
+    self.save
     
     User.add_points_to_user_by_uid(self.tweeter["id_str"], points_to_add)
   end

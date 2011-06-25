@@ -15,6 +15,7 @@ CensoredTweets::Application.routes.draw do
   match '/newest' => 'tweets#newest'
   match '/best' => 'tweets#best'
   match '/poll_twitter' => 'tweets#poll_twitter'
+  match '/upvote/:id' => 'tweets#upvote', :as => :upvote_tweet
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

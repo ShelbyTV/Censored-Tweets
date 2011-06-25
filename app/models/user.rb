@@ -33,6 +33,9 @@ class User
   
   timestamps!
 
+  def has_voted_for(tweet)
+    tweet and tweet.voter_user_ids.include? self.id
+  end
 
   def self.add_points_to_user_by_uid(twitter_uid, points)
     User.collection.update({ 'uid' => twitter_uid}, { '$inc' => {'points' => points} })

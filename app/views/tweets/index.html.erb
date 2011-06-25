@@ -27,7 +27,7 @@ TODO
     <td><%= image_tag tweet.tweeter["profile_image_url"] %></td>
     <td><%= tweet.points %></td>
     <td><%= tweet.twitter_status.text %></td>
-    <td>TOOD: VOTEUP</td>
+    <td><%= render :partial => "tweets/upvote", :locals => { :tweet => tweet } %></td>
   </tr>
 <% end %>
 </table>
