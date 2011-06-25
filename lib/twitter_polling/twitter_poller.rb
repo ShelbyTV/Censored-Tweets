@@ -1,3 +1,5 @@
+require 'tweet_processor'
+
 module Twitter
   class Poller
     
@@ -18,6 +20,9 @@ module Twitter
       end
 
       TwitterPolling.create(:latest_id => new_results.first.id_str) unless new_results.empty?
+      
+      # Process and throw them into DB
+      TweetProcessor.process_tweets(new_results, client)
       
       return new_results
     end
