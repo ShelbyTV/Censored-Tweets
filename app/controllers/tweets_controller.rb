@@ -41,6 +41,15 @@ class TweetsController < ApplicationController
     end
   end
   
+  def head2head
+    @tweets = Tweet.two_random_tweets
+    
+    respond_to do |format|
+      format.html # head2head.html.erb
+      format.xml  { render :xml => @tweet }
+    end
+  end
+  
   def poll_twitter
     @new_results = Twitter::Poller.search("#censoredtweet")
   end
