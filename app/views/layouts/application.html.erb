@@ -18,18 +18,22 @@
   <div id="container">
     
     <header id="header">
-      <%= image_tag 'logo.png', :class => 'header-logo' %>
+      <%= link_to image_tag('logo.png', :class => 'header-logo'), root_path %>
       <%= image_tag 'your-shit.png', :class => 'header-text' %>
 			
 			<div id="welcome-user">
 				<% if current_user %>  
-	        Welcome, <%= current_user.name %>! <br />
-	        <%= current_user.points %> points <br />
-	        <%= current_user.votes_received %> votes received <br /> 
+	        Welcome, <%= current_user.name %>! | 
+	        <%= current_user.points %> points |
+	        <%= current_user.votes_received %> votes received |
+					<%= link_to 'signout', '/signout' %>
 	      <% else %>  
 	        <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
 	      <% end %>
-			</div>      
+			</div>
+			
+			<%= yield :nav %>
+			
     </header>
     
     <%= yield %>

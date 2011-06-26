@@ -7,3 +7,25 @@
 <div id="sidebar">
   the sidebar is here
 </div>
+
+<% content_for :nav do -%>
+	<div id="nav">
+		<ul class="nav">
+			<%= link_to root_path do %>
+				<li>home</li>
+			<% end %>
+			<%= link_to best_path do %>
+				<li class="current">best</li>
+			<% end %>
+			<%= link_to newest_path do %>
+				<li>new</li>
+			<% end %>
+			<%= link_to head2head_path do %>
+				<li>head 2 ****</li>
+			<% end %>
+			<%= link_to '/about' do %>
+				<li class="about">about</li>
+			<% end %>
+		</ul>
+	</div>
+<% end -%>

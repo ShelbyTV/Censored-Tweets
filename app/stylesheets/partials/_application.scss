@@ -8,11 +8,42 @@ body.bp {
 	#header {
 		background-color: $primary-bg;
 		#welcome-user {
+			margin: -20px 55px 5px 0px;
+			text-align: right;
+			font-size: 13px;
+			font-weight: bold;
+			a { text-decoration: none; color: black;}
 
 		}
 		.header-logo{ }
 		.header-text{ 
 
+		}
+		#nav {
+			margin-left:10px;
+			font-size: 18px;
+			a {text-decoration: none;}
+			ul.nav{
+				@include horizontal-list-container;
+				li {
+					@include horizontal-list-item;
+					width: 100px;
+					padding: 5px 0px 0px 0px;
+					margin: 0px 15px;
+					text-align: center;
+					@include border-top-radius(8px);
+				}
+				li.current {
+					width: 100px;
+					background-image: url("/images/bg.png");
+					padding: 5px;
+					text-align: center;
+				}
+				li.about {
+					float: right;
+					margin-right: 27px;
+				}
+			}			
 		}
 	}
 	
