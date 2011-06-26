@@ -16,7 +16,7 @@
 	$(".intent-retweet-<%= tweet.id %>").click(function(){
 		window.open("http://twitter.com/intent/retweet?tweet_id=<%= tweet.twitter_status.tweet_id.to_s %>",'','width=600,height=380,top=117,left=300,chrome=1,centerscreen=1,menubar=0,toolbar=0,location=0,statusbar=0,scrollbars=1');return false;});
 	$(".intent-reply-<%= tweet.id %>").click(function(){
-		window.open("http://twitter.com/intent/reply?tweet_id=<%= tweet.twitter_status.tweet_id.to_s %>",'','width=600,height=380,top=117,left=300,chrome=1,centerscreen=1,menubar=0,toolbar=0,location=0,statusbar=0,scrollbars=1');return false;});
+		window.open("http://twitter.com/intent/tweet?in_reply_to=<%= tweet.twitter_status.tweet_id.to_s %>",'','width=600,height=380,top=117,left=300,chrome=1,centerscreen=1,menubar=0,toolbar=0,location=0,statusbar=0,scrollbars=1');return false;});
 	$(".intent-favorite-<%= tweet.id %>").click(function(){
 		window.open("http://twitter.com/intent/favorite?tweet_id=<%= tweet.twitter_status.tweet_id.to_s %>",'','width=600,height=380,top=117,left=300,chrome=1,centerscreen=1,menubar=0,toolbar=0,location=0,statusbar=0,scrollbars=1');return false;});
 <% end -%>
