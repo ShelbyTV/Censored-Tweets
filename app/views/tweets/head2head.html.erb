@@ -53,3 +53,22 @@
 	  the sidebar is here
 	</div>	
 </div>
+
+<% content_for :nav do -%>
+	<div id="nav">
+		<ul class="nav">
+			<%= link_to root_path do %>
+				<li>home</li>
+			<% end %>
+			<%= link_to best_path do %>
+				<li>best</li>
+			<% end %>
+			<%= link_to newest_path do %>
+				<li>newest</li>
+			<% end %>
+			<%= link_to head2head_path do %>
+				<li class="current">head 2 ****</li>
+			<% end %>
+		</ul>
+	</div>
+<% end -%>

@@ -16,6 +16,28 @@ body.bp {
 			margin-right: 40px;
 			float: right;
 		}
+		#nav {
+			margin-left:10px;
+			font-size: 18px;
+			a {text-decoration: none;}
+			ul.nav{
+				@include horizontal-list-container;
+				li {
+					@include horizontal-list-item;
+					width: 100px;
+					padding: 10px 0px 0px 0px;
+					margin: 0px 15px;
+					text-align: center;
+					@include border-top-radius(8px);
+				}
+				li.current {
+					width: 100px;
+					background-image: url("/images/bg.png");
+					padding: 10px;
+					text-align: center;
+				}
+			}			
+		}
 	}
 	
 	#content {
