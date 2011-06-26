@@ -33,7 +33,7 @@ form.bp {
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 body.two-col {
-  #container { @include container; }
+  #container { @include container;}
   #header, #footer { @include column($blueprint-grid-columns); }
   #content { @include column(18); } 
   #sidebar { @include column(6, true); }
