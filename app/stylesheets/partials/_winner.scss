@@ -1,0 +1,67 @@
+.winners {
+	@include prepend(1);
+	@include column(17);
+	
+	h2 { margin-bottom: 0!important; padding-bottom: 0; }
+	
+	.explanation {
+		@include column(17);
+		margin-top: 30px;
+		font-size: 14px;
+		color: $tweet-user-text;
+		.inner { margin: 10px; }
+	}
+}
+
+.winner-section {
+	background-color: rgba(220,220,225,0.7);
+	@include column(17);
+	margin-bottom: 20px;
+}
+
+.winner {
+	position: relative;
+	@include column(17);
+	
+	img {
+		text-align: center;
+		margin: 10px 0px 0px 10px;
+		width: 650px;
+		max-width: 650px;
+	}
+	
+	.tweet-text {
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		
+		font-size: 33px;
+		color: white;
+		@include text-shadow(black 0px 0px 1px, black 0px 0px 2px, black 0px 0px 3px, black 0px 0px 4px, black 0px 0px 5px, black 0px 0px 6px, black 0px 0px 7px);
+	}
+	
+	.tweeter {
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		
+		font-size: 24px;
+		color: white;
+		@include text-shadow(black 0px 0px 1px, black 0px 0px 2px, black 0px 0px 3px, black 0px 0px 4px, black 0px 0px 5px, black 0px 0px 6px, black 0px 0px 7px);
+		
+		.avatar {
+			@include column(2);
+			img {
+				border: 3px solid black;
+				@include border-radius(3px);
+			}
+		}
+		
+		.tweeter-info {
+			@include column(14);
+		}
+		
+		
+	}
+	
+}
