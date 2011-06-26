@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
   before_filter :authenticate_user!, :only => [:upvote]
 
   def index
-    @tweets = Tweet.todays_best.limit(33).all
+    @tweets = Tweet.newest.limit(33).all
     @winner = Winner.most_recent.first
 
     respond_to do |format|

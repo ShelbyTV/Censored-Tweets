@@ -1,0 +1,93 @@
+.tweets {
+	@include prepend(1);
+	@include column(17);
+}
+
+.tweet {
+	@include column(17);
+	@include append-bottom();
+	
+	.tweet-body {
+		@include column(17);
+		background-color: $tweet-primary-bg;
+		@include single-box-shadow($tweet-primary-bg - #333, 1px, 1px, 1px);
+		padding: 10px 0px;
+		
+		.tweet-text {
+			font-size: 18px;
+			@include column(15);
+			.inner {
+				padding-left: 10px;
+			}
+		}
+		
+		.tweet-actions {
+			@include column(2, true);
+			.upvote-holder {
+				background-color: white;
+				@include single-box-shadow($tweet-primary-bg - #333, 0px, 0px, 1px, 1px);
+				margin-right: -5px;
+				padding: 5px 0px 3px 0px;
+				text-align: center;
+			}
+			.upvote-holder.voted {
+				background-color: $primary-bg;
+			}
+			
+			.twitter-intents {
+				text-align: right;
+				margin-top: 10px;
+				padding-right: 5px;
+			}
+		}
+	}
+	
+	.tweeter {
+		@include prepend(1);
+		@include column(16);
+		
+		background-color: rgba(255,255,255,0.4);
+		
+		position: relative;
+		margin-top: 13px;
+		padding-top: 5px;
+		
+		.tail {
+			position: absolute;
+			top: -13px;
+		}
+		
+		.user {
+			@include column(11);
+			color: $tweet-user-text;
+			
+			.user-image {
+				@include column(1);
+				img { 
+					width: 33px;
+					border: 1px solid $primary-dark-outline;
+					padding: 1px;
+				}
+			}
+			.user-info {
+				@include column(10, true);
+				font-weight: bold;
+				.time { font-weight: normal; }
+			}
+		}
+		.scores{
+			@include column(5, true);
+			text-align: right;
+			.inner {
+				padding-right: 5px;
+			}
+		}
+	}
+	
+}
+
+.tweet:hover {
+	.tweeter {
+		background-color: rgba(255,255,255,0.8);
+	}
+}

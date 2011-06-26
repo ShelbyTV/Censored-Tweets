@@ -8,7 +8,7 @@ body.bp {
 	#header {
 		background-color: $primary-bg;
 		#welcome-user {
-			margin: -20px 55px 5px 10px;
+			margin: -5px 55px 15px 0px;
 			text-align: right;
 			font-size: 13px;
 			font-weight: bold;
@@ -57,15 +57,13 @@ body.bp {
 		}
 	}
 	
-	#content {
-		width: 650px;
-		margin: 20px;
+
+	
+	//common styles
+	h2 { 
+		background-color: $primary-bg; 
+		@include single-text-shadow(white, 1px, 1px, 1px);
+		span { padding-left: 10px; }
 	}
 	
-	#sidebar {
-		float: right;
-		width: 230px;
-		margin-right: 20px;
-		//margin-top: 200px;
-	}
 }

@@ -448,24 +448,25 @@ form.bp .box {
 }
 /* line 42, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 form.bp .border {
-  border-right: 1px solid #eeeeee;
+  padding-right: 4px;
+  margin-right: 5px;
+  border-right: 1px solid #dddddd;
 }
 /* line 45, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 form.bp .colborder {
-  padding-right: 2.084%;
-  margin-right: 2.084%;
-  border-right: 1px solid #eeeeee;
+  padding-right: 24px;
+  margin-right: 25px;
+  border-right: 1px solid #dddddd;
 }
 /* line 47, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 form.bp hr {
   background: #dddddd;
   color: #dddddd;
   clear: both;
+  float: none;
   width: 100%;
-  height: 0.083em;
-  margin: 0;
-  margin-left: 2.084%;
-  margin-right: 2.084%;
+  height: 0.1em;
+  margin: 0 0 1.45em;
   border: none;
 }
 /* line 49, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
@@ -473,14 +474,14 @@ form.bp hr.space {
   background: #dddddd;
   color: #dddddd;
   clear: both;
+  float: none;
   width: 100%;
-  height: 0.083em;
-  margin: 0;
-  margin-left: 2.084%;
-  margin-right: 2.084%;
+  height: 0.1em;
+  margin: 0 0 1.45em;
   border: none;
   background: white;
   color: white;
+  visibility: hidden;
 }
 /* line 51, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 form.bp form.inline {
@@ -493,8 +494,7 @@ form.bp form.inline p {
 
 /* line 39, ../../app/stylesheets/screen.scss */
 body.two-col #container {
-  min-width: 950px;
-  width: 80%;
+  width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
@@ -503,25 +503,36 @@ body.two-col #container {
 body.two-col #header, body.two-col #footer {
   display: inline;
   float: left;
-  overflow: hidden;
-  width: 99.974%;
-  margin-right: 1.042%;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body.two-col #header, * html body.two-col #footer {
+  overflow-x: hidden;
 }
 /* line 41, ../../app/stylesheets/screen.scss */
 body.two-col #content {
   display: inline;
   float: left;
-  overflow: hidden;
-  width: 74.72%;
-  margin-right: 1.042%;
+  margin-right: 10px;
+  width: 710px;
+  margin-top: 20px;
 }
-/* line 42, ../../app/stylesheets/screen.scss */
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body.two-col #content {
+  overflow-x: hidden;
+}
+/* line 45, ../../app/stylesheets/screen.scss */
 body.two-col #sidebar {
   display: inline;
   float: left;
-  overflow: hidden;
-  width: 24.212%;
   margin-right: 0;
+  width: 230px;
+  margin-top: 20px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body.two-col #sidebar {
+  overflow-x: hidden;
 }
 
 /* line 1, ../../app/stylesheets/partials/_application.scss */
@@ -538,7 +549,7 @@ body.bp #header {
 }
 /* line 10, ../../app/stylesheets/partials/_application.scss */
 body.bp #header #welcome-user {
-  margin: -20px 55px 5px 10px;
+  margin: -5px 55px 15px 0px;
   text-align: right;
   font-size: 13px;
   font-weight: bold;
@@ -648,16 +659,14 @@ body.bp #header #nav ul.nav li.about {
   float: right;
   margin-right: 27px;
 }
-/* line 60, ../../app/stylesheets/partials/_application.scss */
-body.bp #content {
-  width: 650px;
-  margin: 20px;
+/* line 63, ../../app/stylesheets/partials/_application.scss */
+body.bp h2 {
+  background-color: #f1ff5f;
+  text-shadow: white 1px 1px 1px;
 }
-/* line 65, ../../app/stylesheets/partials/_application.scss */
-body.bp #sidebar {
-  float: right;
-  width: 230px;
-  margin-right: 20px;
+/* line 66, ../../app/stylesheets/partials/_application.scss */
+body.bp h2 span {
+  padding-left: 10px;
 }
 
 /* line 2, ../../app/stylesheets/partials/_henron.scss */
@@ -723,4 +732,182 @@ body.bp #sidebar {
 /* line 55, ../../app/stylesheets/partials/_henron.scss */
 .head2head .tweet .tweet-text {
   font-size: 22px;
+}
+
+/* line 1, ../../app/stylesheets/partials/_tweet.scss */
+.tweets {
+  padding-left: 40px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 670px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tweets {
+  overflow-x: hidden;
+}
+
+/* line 6, ../../app/stylesheets/partials/_tweet.scss */
+.tweet {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 670px;
+  margin-bottom: 1.5em;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tweet {
+  overflow-x: hidden;
+}
+/* line 10, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweet-body {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 670px;
+  background-color: #eeeef0;
+  -moz-box-shadow: 1px 1px 1px #bbbbbd;
+  -webkit-box-shadow: 1px 1px 1px #bbbbbd;
+  -o-box-shadow: 1px 1px 1px #bbbbbd;
+  box-shadow: 1px 1px 1px #bbbbbd;
+  padding: 10px 0px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tweet .tweet-body {
+  overflow-x: hidden;
+}
+/* line 16, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweet-body .tweet-text {
+  font-size: 18px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 590px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tweet .tweet-body .tweet-text {
+  overflow-x: hidden;
+}
+/* line 19, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweet-body .tweet-text .inner {
+  padding-left: 10px;
+}
+/* line 24, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweet-body .tweet-actions {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 70px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tweet .tweet-body .tweet-actions {
+  overflow-x: hidden;
+}
+/* line 26, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweet-body .tweet-actions .upvote-holder {
+  background-color: white;
+  -moz-box-shadow: 0px 0px 1px 1px #bbbbbd;
+  -webkit-box-shadow: 0px 0px 1px 1px #bbbbbd;
+  -o-box-shadow: 0px 0px 1px 1px #bbbbbd;
+  box-shadow: 0px 0px 1px 1px #bbbbbd;
+  margin-right: -5px;
+  padding: 5px 0px 3px 0px;
+  text-align: center;
+}
+/* line 33, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweet-body .tweet-actions .upvote-holder.voted {
+  background-color: #f1ff5f;
+}
+/* line 37, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweet-body .tweet-actions .twitter-intents {
+  text-align: right;
+  margin-top: 10px;
+  padding-right: 5px;
+}
+/* line 45, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweeter {
+  padding-left: 40px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 630px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: relative;
+  margin-top: 13px;
+  padding-top: 5px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tweet .tweeter {
+  overflow-x: hidden;
+}
+/* line 55, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweeter .tail {
+  position: absolute;
+  top: -13px;
+}
+/* line 60, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweeter .user {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 430px;
+  color: #6a7881;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tweet .tweeter .user {
+  overflow-x: hidden;
+}
+/* line 64, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweeter .user .user-image {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 30px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tweet .tweeter .user .user-image {
+  overflow-x: hidden;
+}
+/* line 66, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweeter .user .user-image img {
+  width: 33px;
+  border: 1px solid #abc3c9;
+  padding: 1px;
+}
+/* line 72, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweeter .user .user-info {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 390px;
+  font-weight: bold;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tweet .tweeter .user .user-info {
+  overflow-x: hidden;
+}
+/* line 75, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweeter .user .user-info .time {
+  font-weight: normal;
+}
+/* line 78, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweeter .scores {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 190px;
+  text-align: right;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .tweet .tweeter .scores {
+  overflow-x: hidden;
+}
+/* line 81, ../../app/stylesheets/partials/_tweet.scss */
+.tweet .tweeter .scores .inner {
+  padding-right: 5px;
+}
+
+/* line 90, ../../app/stylesheets/partials/_tweet.scss */
+.tweet:hover .tweeter {
+  background-color: rgba(255, 255, 255, 0.8);
 }

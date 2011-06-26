@@ -9,7 +9,7 @@
 
 // Import the non-default scaffolding module.
 @import "blueprint/scaffolding";
-@import "blueprint/liquid";
+@import "blueprint/grid";
 @import "compass/css3";
 @import "compass/utilities";
 
@@ -38,9 +38,16 @@ form.bp {
 body.two-col {
   #container { @include container;}
   #header, #footer { @include column($blueprint-grid-columns); }
-  #content { @include column(18); } 
-  #sidebar { @include column(6, true); }
+  #content { 
+		@include column(18); 
+		margin-top: 20px;
+	} 
+  #sidebar { 
+		@include column(6, true); 
+		margin-top: 20px;
+	}
 }
 
 @import "partials/application";
 @import "partials/henron";
+@import "partials/tweet";
