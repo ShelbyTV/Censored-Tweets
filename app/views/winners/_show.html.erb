@@ -1,3 +1,8 @@
 SHOW WINNER
-<%= @winner.created_at %>
-<%= @winner.tweet.id %>
+<%= image_tag @winner.background_image %>
+
+@<%= @winner.tweet.tweeter["screen_name"] %>
+<%= image_tag @winner.tweet.tweeter["profile_image_url"] %>
+<%= @winner.tweet.twitter_status.text %>
+<%= @winner.tweet.points %> points.
+<%= @winner.tweet.vote_count %> votes.

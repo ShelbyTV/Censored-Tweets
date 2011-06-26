@@ -20,6 +20,7 @@ class Tweet
   
   scope :todays_best, sort(:points => -1)
   scope :newest, sort("twitter_status.status_created_at" => -1)
+  scope :with_twitter_uid, lambda { |uid| where( "tweeter.id_str" => uid ) }
   
   def self.two_random_tweets(user)
     tweets = Tweet.where(:created_at => {"$gt" => Time.zone.now - 36.hours})
