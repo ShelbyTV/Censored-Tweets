@@ -6,8 +6,15 @@ body.bp {
 	}
 	
 	#header {
+		background-color: $primary-bg;
 		#welcome-user {
 			margin-left: 20px;
+		}
+		.header-logo{ margin: 20px; }
+		.header-text{ 
+			margin-top: 40px;
+			margin-right: 40px;
+			float: right;
 		}
 	}
 	

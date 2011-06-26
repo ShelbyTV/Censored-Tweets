@@ -1,56 +1,58 @@
-#content.head2head {
-	height: 600px;
-	#tweet_1 { 
-		left: 155px;
+.head2head{
+	#content {
+		height: 600px;
+		#tweet_1 { 
+			left: 155px;
+		}
+		#tweet_2 {
+			right: 155px;
+		}	
+		#versus {
+			position:absolute;
+			width: 75px;
+			height: 72px;
+			left: 47%;
+			top: 285px;
+			background-image: url("/images/vs.png");
+		}
 	}
-	#tweet_2 {
-		right: 155px;
+
+
+	.tweets{
+		position: absolute;
+		height: 250px;
+		width: 370px;
+		margin: 20px;
+		background: #deeff0;
+		padding: 5px;	
+		@include box-shadow(rgba(black, 0.4) 0 0 15px, rgba(green, 0.2) 0 0 3px 0px inset);
+	}
+
+	.bottom-bar{
+		background: #eaf9f9;
+		font-size: 14px;
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		right: 0px;
+		img {
+			width: 48px;
+			margin: 0px 10px;
+			float: left;
+			padding: 2px;
+			border: solid 1px #6e6e6e;
+		}
+		.vote {
+			margin: 10px 0px;
+			text-align: center;
+		}
+	}
+
+	.tweet {
+		margin:20px 10px;
+	}
+
+	.tweet .tweet-text{
+		font-size: 22px;
 	}	
-	#versus {
-		position:absolute;
-		width: 75px;
-		height: 72px;
-		left: 47%;
-		top: 285px;
-		background-image: url("/images/vs.png");
-	}
-}
-
-
-.tweets{
-	position: absolute;
-	height: 250px;
-	width: 370px;
-	margin: 20px;
-	background: #deeff0;
-	padding: 5px;	
-	@include box-shadow(rgba(black, 0.4) 0 0 15px, rgba(green, 0.2) 0 0 3px 0px inset);
-}
-
-.bottom-bar{
-	background: #eaf9f9;
-	font-size: 14px;
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	right: 0px;
-	img {
-		width: 48px;
-		margin: 0px 10px;
-		float: left;
-		padding: 2px;
-		border: solid 1px #6e6e6e;
-	}
-	.vote {
-		margin: 10px 0px;
-		text-align: center;
-	}
-}
-
-.tweet {
-	margin:20px 10px;
-}
-
-.tweet .tweet-text{
-	font-size: 22px;
 }
