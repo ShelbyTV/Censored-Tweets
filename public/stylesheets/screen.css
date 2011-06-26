@@ -703,7 +703,11 @@ body.bp h2 span {
   -o-box-shadow: rgba(0, 0, 0, 0.4) 0 0 15px, rgba(0, 128, 0, 0.2) 0 0 3px 0px inset;
   box-shadow: rgba(0, 0, 0, 0.4) 0 0 15px, rgba(0, 128, 0, 0.2) 0 0 3px 0px inset;
 }
-/* line 31, ../../app/stylesheets/partials/_henron.scss */
+/* line 29, ../../app/stylesheets/partials/_henron.scss */
+.head2head .tweets .tweet-text {
+  font-size: 22px;
+}
+/* line 35, ../../app/stylesheets/partials/_henron.scss */
 .head2head .bottom-bar {
   background: #eaf9f9;
   font-size: 14px;
@@ -712,7 +716,7 @@ body.bp h2 span {
   width: 100%;
   right: 0px;
 }
-/* line 38, ../../app/stylesheets/partials/_henron.scss */
+/* line 42, ../../app/stylesheets/partials/_henron.scss */
 .head2head .bottom-bar img {
   width: 48px;
   margin: 0px 10px;
@@ -720,18 +724,14 @@ body.bp h2 span {
   padding: 2px;
   border: solid 1px #6e6e6e;
 }
-/* line 45, ../../app/stylesheets/partials/_henron.scss */
+/* line 49, ../../app/stylesheets/partials/_henron.scss */
 .head2head .bottom-bar .vote {
   margin: 10px 0px;
   text-align: center;
 }
-/* line 51, ../../app/stylesheets/partials/_henron.scss */
+/* line 55, ../../app/stylesheets/partials/_henron.scss */
 .head2head .tweet {
   margin: 20px 10px;
-}
-/* line 55, ../../app/stylesheets/partials/_henron.scss */
-.head2head .tweet .tweet-text {
-  font-size: 22px;
 }
 
 /* line 1, ../../app/stylesheets/partials/_tweet.scss */
