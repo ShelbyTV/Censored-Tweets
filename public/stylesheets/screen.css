@@ -558,59 +558,66 @@ body.bp #sidebar {
 }
 
 /* line 1, ../../app/stylesheets/partials/_henron.scss */
-#versus {
+#content {
+  height: 600px;
+}
+/* line 3, ../../app/stylesheets/partials/_henron.scss */
+#content #tweet_1 {
+  left: 155px;
+}
+/* line 6, ../../app/stylesheets/partials/_henron.scss */
+#content #tweet_2 {
+  right: 155px;
+}
+/* line 9, ../../app/stylesheets/partials/_henron.scss */
+#content #versus {
   position: absolute;
-  left: 48%;
-  top: 148px;
-  font-size: 30px;
+  width: 75px;
+  height: 72px;
+  left: 47%;
+  top: 285px;
+  background-image: url("/images/vs.png");
 }
 
-/* line 7, ../../app/stylesheets/partials/_henron.scss */
-#tweet_1 {
+/* line 20, ../../app/stylesheets/partials/_henron.scss */
+.tweets {
   position: absolute;
-  left: 10%;
-  width: 30%;
+  height: 250px;
+  width: 370px;
   margin: 20px;
-  padding: 10px;
-  background: lightBlue;
+  background: #deeff0;
+  padding: 5px;
 }
 
-/* line 16, ../../app/stylesheets/partials/_henron.scss */
-#tweet_2 {
+/* line 29, ../../app/stylesheets/partials/_henron.scss */
+.bottom-bar {
+  background: #eaf9f9;
+  font-size: 14px;
   position: absolute;
-  right: 10%;
-  width: 30%;
-  margin: 20px;
-  padding: 10px;
-  background: lightBlue;
+  bottom: 0px;
+  width: 100%;
+  right: 0px;
 }
-
-/* line 25, ../../app/stylesheets/partials/_henron.scss */
-.avatar {
+/* line 36, ../../app/stylesheets/partials/_henron.scss */
+.bottom-bar img {
   width: 48px;
-  margin-right: 10px;
-  position: relative;
+  margin: 0px 10px;
+  float: left;
+  padding: 2px;
+  border: solid 1px #6e6e6e;
+}
+/* line 43, ../../app/stylesheets/partials/_henron.scss */
+.bottom-bar .vote {
+  margin: 10px 0px;
+  text-align: center;
 }
 
-/* line 31, ../../app/stylesheets/partials/_henron.scss */
+/* line 49, ../../app/stylesheets/partials/_henron.scss */
 .tweet {
-  position: relative;
   margin: 20px 10px;
 }
 
-/* line 37, ../../app/stylesheets/partials/_henron.scss */
+/* line 53, ../../app/stylesheets/partials/_henron.scss */
 .tweet .tweet-text {
-  position: absolute;
-}
-
-/* line 41, ../../app/stylesheets/partials/_henron.scss */
-.name {
-  font-size: 20px;
-  text-align: center;
-}
-
-/* line 46, ../../app/stylesheets/partials/_henron.scss */
-.vote {
-  margin: 10px 0px;
-  text-align: center;
+  font-size: 22px;
 }
