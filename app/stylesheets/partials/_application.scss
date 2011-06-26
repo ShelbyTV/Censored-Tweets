@@ -8,16 +8,24 @@ body.bp {
 	#header {
 		background-color: $primary-bg;
 		#welcome-user {
-			margin: -20px 55px 5px 0px;
+			margin: -5px 55px 15px 0px;
 			text-align: right;
 			font-size: 13px;
 			font-weight: bold;
-			a { text-decoration: none; color: black;}
-
+			a { text-decoration: none; color: black; curser: pointer;}
+			.signin { 
+				background: lightblue;
+				padding: 10px;
+				@include border-radius(3px);
+				@include box-shadow(rgba(black, 0.4) 0 0 15px, rgba(green, 0.2) 0 0 3px 0px inset);
+				img { vertical-align: middle; }
+			}
 		}
-		.header-logo{ }
+		.header-logo{ margin: 20px; }
 		.header-text{ 
-
+			margin-top: 40px;
+			margin-right: 40px;
+			float: right;
 		}
 		#nav {
 			margin-left:10px;
@@ -27,6 +35,7 @@ body.bp {
 				@include horizontal-list-container;
 				li {
 					@include horizontal-list-item;
+					font-size: 12px;
 					width: 100px;
 					padding: 5px 0px 0px 0px;
 					margin: 0px 15px;
@@ -38,6 +47,7 @@ body.bp {
 					background-image: url("/images/bg.png");
 					padding: 5px;
 					text-align: center;
+					color: black;
 				}
 				li.about {
 					float: right;

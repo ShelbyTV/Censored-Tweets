@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CensoredTweets</title>
+  <title>CensoredTweet</title>
 
 
   <%= stylesheet_link_tag 'screen.css', :media => 'screen, projection' %>
@@ -13,6 +13,19 @@
   <%= javascript_include_tag :defaults %>
 
   <%= csrf_meta_tag %>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-24195606-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
 </head>
 <body class="bp two-col">
   <div id="container">
@@ -27,8 +40,13 @@
 	        <%= current_user.points %> points |
 	        <%= current_user.votes_received %> votes received |
 					<%= link_to 'signout', '/signout' %>
-	      <% else %>  
-	        <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
+	      <% else %>
+	        <%= link_to "/auth/twitter" do %>						
+						<span class="signin">
+							Sign in with Twitter
+							<%= image_tag 'http://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png' %>
+						</span>
+					<% end %>
 	      <% end %>
 			</div>
 			
