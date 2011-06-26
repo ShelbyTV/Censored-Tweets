@@ -1,8 +1,28 @@
-SHOW WINNER
-<%= image_tag @winner.background_image %>
+<div class="winner">
+  
+  <%= image_tag @winner.background_image %>
+  <div class="tweet-text">
+    <%= @winner.tweet.twitter_status.text %>
+  </div>
 
-@<%= @winner.tweet.tweeter["screen_name"] %>
-<%= image_tag @winner.tweet.tweeter["profile_image_url"] %>
-<%= @winner.tweet.twitter_status.text %>
-<%= @winner.tweet.points %> points.
-<%= @winner.tweet.vote_count %> votes.
+  <div class="tweeter">
+  
+    <div class="avatar">
+      <%= image_tag @winner.tweet.tweeter["profile_image_url"] %>
+    </div>
+    
+    <div class="tweeter-info">
+      censored twat by @<%= @winner.tweet.tweeter["screen_name"] %>
+      <br />
+      <%= @winner.tweet.points %> points |
+      <%= @winner.tweet.vote_count %> votes |
+      <%= @winner.created_at.to_s(:long_date) %>
+    </div>
+
+  </div>
+
+  
+  
+  
+
+</div>

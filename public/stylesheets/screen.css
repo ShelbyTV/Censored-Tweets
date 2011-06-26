@@ -879,3 +879,122 @@ body.bp h2 span {
 .tweet:hover .tweeter {
   background-color: rgba(255, 255, 255, 0.8);
 }
+
+/* line 1, ../../app/stylesheets/partials/_winner.scss */
+.winners {
+  padding-left: 40px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 670px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .winners {
+  overflow-x: hidden;
+}
+/* line 5, ../../app/stylesheets/partials/_winner.scss */
+.winners h2 {
+  margin-bottom: 0!important;
+  padding-bottom: 0;
+}
+/* line 7, ../../app/stylesheets/partials/_winner.scss */
+.winners .explanation {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 670px;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #6a7881;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .winners .explanation {
+  overflow-x: hidden;
+}
+/* line 12, ../../app/stylesheets/partials/_winner.scss */
+.winners .explanation .inner {
+  margin: 10px;
+}
+
+/* line 16, ../../app/stylesheets/partials/_winner.scss */
+.winner-section {
+  background-color: rgba(220, 220, 225, 0.7);
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 670px;
+  margin-bottom: 20px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .winner-section {
+  overflow-x: hidden;
+}
+
+/* line 22, ../../app/stylesheets/partials/_winner.scss */
+.winner {
+  position: relative;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 670px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .winner {
+  overflow-x: hidden;
+}
+/* line 26, ../../app/stylesheets/partials/_winner.scss */
+.winner img {
+  text-align: center;
+  margin: 10px 0px 0px 10px;
+  max-width: 650px;
+}
+/* line 32, ../../app/stylesheets/partials/_winner.scss */
+.winner .tweet-text {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 33px;
+  color: white;
+  text-shadow: black 0px 0px 1px, black 0px 0px 2px, black 0px 0px 3px, black 0px 0px 4px, black 0px 0px 5px, black 0px 0px 6px, black 0px 0px 7px;
+}
+/* line 42, ../../app/stylesheets/partials/_winner.scss */
+.winner .tweeter {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 24px;
+  color: white;
+  text-shadow: black 0px 0px 1px, black 0px 0px 2px, black 0px 0px 3px, black 0px 0px 4px, black 0px 0px 5px, black 0px 0px 6px, black 0px 0px 7px;
+}
+/* line 51, ../../app/stylesheets/partials/_winner.scss */
+.winner .tweeter .avatar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 70px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .winner .tweeter .avatar {
+  overflow-x: hidden;
+}
+/* line 53, ../../app/stylesheets/partials/_winner.scss */
+.winner .tweeter .avatar img {
+  border: 3px solid black;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 59, ../../app/stylesheets/partials/_winner.scss */
+.winner .tweeter .tweeter-info {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 550px;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .winner .tweeter .tweeter-info {
+  overflow-x: hidden;
+}

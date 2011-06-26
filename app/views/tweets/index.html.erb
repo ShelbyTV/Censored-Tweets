@@ -1,9 +1,18 @@
 <div id="content">
   <% if @winner %>
-    <h2><span>#censoredtweet of the day</span></h2>
-    <%= render :partial => "winners/show", %>
+    <div class="winners">
+      <h2><span>#censoredtweet of the day</span></h2>
+      <div class="winner-section">
+        <%= render :partial => "winners/show", %>
+        <div class="explanation">
+          <div class="inner">
+            everyday at midnight we *** the tweet with the most up***** from that day,
+            then we do **** to it & tweet it out.  your life goal should be to **** this great honor.
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <hr />
   <% end -%>
 
   <div class="tweets">
