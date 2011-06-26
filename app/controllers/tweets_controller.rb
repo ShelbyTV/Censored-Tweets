@@ -63,6 +63,10 @@ class TweetsController < ApplicationController
     end
   end
   
+  def about
+    
+  end
+  
   def poll_twitter
     @new_results = Twitter::Poller.search("#censoredtweet")
   end
