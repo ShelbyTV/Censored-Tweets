@@ -23,8 +23,7 @@
 	position: relative;
 	@include column(17);
 	
-	img {
-		text-align: center;
+	img.bg-image {
 		margin: 10px 0px 0px 10px;
 		width: 650px;
 		max-width: 650px;

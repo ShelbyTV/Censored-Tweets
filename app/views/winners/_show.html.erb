@@ -1,6 +1,6 @@
 <div class="winner">
   
-  <%= image_tag @winner.background_image %>
+  <%= image_tag @winner.background_image, :class => "bg-image" %>
   <div class="tweet-text">
     <%= @winner.tweet.twitter_status.text %>
   </div>

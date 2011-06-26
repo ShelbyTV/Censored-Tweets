@@ -976,9 +976,9 @@ body.bp h2 span {
   overflow-x: hidden;
 }
 /* line 26, ../../app/stylesheets/partials/_winner.scss */
-.winner img {
-  text-align: center;
+.winner img.bg-image {
   margin: 10px 0px 0px 10px;
+  width: 650px;
   max-width: 650px;
 }
 /* line 32, ../../app/stylesheets/partials/_winner.scss */
