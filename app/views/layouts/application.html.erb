@@ -25,7 +25,8 @@
 				<% if current_user %>  
 	        Welcome, <%= current_user.name %>! | 
 	        <%= current_user.points %> points |
-	        <%= current_user.votes_received %> votes received 
+	        <%= current_user.votes_received %> votes received |
+					<%= link_to 'signout', '/signout' %>
 	      <% else %>  
 	        <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
 	      <% end %>

@@ -8,7 +8,11 @@ body.bp {
 	#header {
 		background-color: $primary-bg;
 		#welcome-user {
-			margin-left: 20px;
+			margin: -20px 55px 5px 0px;
+			text-align: right;
+			font-size: 13px;
+			font-weight: bold;
+			a { text-decoration: none; color: black;}
 		}
 		.header-logo{ margin: 20px; }
 		.header-text{ 
@@ -25,7 +29,7 @@ body.bp {
 				li {
 					@include horizontal-list-item;
 					width: 100px;
-					padding: 10px 0px 0px 0px;
+					padding: 5px 0px 0px 0px;
 					margin: 0px 15px;
 					text-align: center;
 					@include border-top-radius(8px);
@@ -33,8 +37,12 @@ body.bp {
 				li.current {
 					width: 100px;
 					background-image: url("/images/bg.png");
-					padding: 10px;
+					padding: 5px;
 					text-align: center;
+				}
+				li.about {
+					float: right;
+					margin-right: 27px;
 				}
 			}			
 		}
