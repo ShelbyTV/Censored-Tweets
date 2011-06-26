@@ -57,7 +57,7 @@ a img {
   border: none;
 }
 
-/* line 20, ../../app/stylesheets/screen.scss */
+/* line 23, ../../app/stylesheets/screen.scss */
 body.bp {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -448,25 +448,24 @@ form.bp .box {
 }
 /* line 42, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 form.bp .border {
-  padding-right: 4px;
-  margin-right: 5px;
-  border-right: 1px solid #dddddd;
+  border-right: 1px solid #eeeeee;
 }
 /* line 45, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 form.bp .colborder {
-  padding-right: 24px;
-  margin-right: 25px;
-  border-right: 1px solid #dddddd;
+  padding-right: 2.084%;
+  margin-right: 2.084%;
+  border-right: 1px solid #eeeeee;
 }
 /* line 47, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 form.bp hr {
   background: #dddddd;
   color: #dddddd;
   clear: both;
-  float: none;
   width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
+  height: 0.083em;
+  margin: 0;
+  margin-left: 2.084%;
+  margin-right: 2.084%;
   border: none;
 }
 /* line 49, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
@@ -474,14 +473,14 @@ form.bp hr.space {
   background: #dddddd;
   color: #dddddd;
   clear: both;
-  float: none;
   width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
+  height: 0.083em;
+  margin: 0;
+  margin-left: 2.084%;
+  margin-right: 2.084%;
   border: none;
   background: white;
   color: white;
-  visibility: hidden;
 }
 /* line 51, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
 form.bp form.inline {
@@ -492,45 +491,37 @@ form.bp form.inline p {
   margin-bottom: 0;
 }
 
-/* line 36, ../../app/stylesheets/screen.scss */
+/* line 39, ../../app/stylesheets/screen.scss */
 body.two-col #container {
-  width: 950px;
+  min-width: 950px;
+  width: 80%;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 37, ../../app/stylesheets/screen.scss */
+/* line 40, ../../app/stylesheets/screen.scss */
 body.two-col #header, body.two-col #footer {
   display: inline;
   float: left;
-  margin-right: 10px;
-  width: 950px;
+  overflow: hidden;
+  width: 99.974%;
+  margin-right: 1.042%;
 }
-/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col #header, * html body.two-col #footer {
-  overflow-x: hidden;
-}
-/* line 38, ../../app/stylesheets/screen.scss */
+/* line 41, ../../app/stylesheets/screen.scss */
 body.two-col #content {
   display: inline;
   float: left;
-  margin-right: 10px;
-  width: 710px;
+  overflow: hidden;
+  width: 74.72%;
+  margin-right: 1.042%;
 }
-/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col #content {
-  overflow-x: hidden;
-}
-/* line 39, ../../app/stylesheets/screen.scss */
+/* line 42, ../../app/stylesheets/screen.scss */
 body.two-col #sidebar {
   display: inline;
   float: left;
+  overflow: hidden;
+  width: 24.212%;
   margin-right: 0;
-  width: 230px;
-}
-/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col #sidebar {
-  overflow-x: hidden;
 }
 
 /* line 1, ../../app/stylesheets/partials/_application.scss */
@@ -587,9 +578,13 @@ body.bp #sidebar {
   margin: 20px;
   background: #deeff0;
   padding: 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 15px, rgba(0, 128, 0, 0.2) 0 0 3px 0px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 15px, rgba(0, 128, 0, 0.2) 0 0 3px 0px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.4) 0 0 15px, rgba(0, 128, 0, 0.2) 0 0 3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 15px, rgba(0, 128, 0, 0.2) 0 0 3px 0px inset;
 }
 
-/* line 29, ../../app/stylesheets/partials/_henron.scss */
+/* line 30, ../../app/stylesheets/partials/_henron.scss */
 .bottom-bar {
   background: #eaf9f9;
   font-size: 14px;
@@ -598,7 +593,7 @@ body.bp #sidebar {
   width: 100%;
   right: 0px;
 }
-/* line 36, ../../app/stylesheets/partials/_henron.scss */
+/* line 37, ../../app/stylesheets/partials/_henron.scss */
 .bottom-bar img {
   width: 48px;
   margin: 0px 10px;
@@ -606,18 +601,18 @@ body.bp #sidebar {
   padding: 2px;
   border: solid 1px #6e6e6e;
 }
-/* line 43, ../../app/stylesheets/partials/_henron.scss */
+/* line 44, ../../app/stylesheets/partials/_henron.scss */
 .bottom-bar .vote {
   margin: 10px 0px;
   text-align: center;
 }
 
-/* line 49, ../../app/stylesheets/partials/_henron.scss */
+/* line 50, ../../app/stylesheets/partials/_henron.scss */
 .tweet {
   margin: 20px 10px;
 }
 
-/* line 53, ../../app/stylesheets/partials/_henron.scss */
+/* line 54, ../../app/stylesheets/partials/_henron.scss */
 .tweet .tweet-text {
   font-size: 22px;
 }
