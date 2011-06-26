@@ -1,4 +1,4 @@
-<div id="upvote-holder-for-<%= tweet.id %>" class="upvote-holder <%= current_user.has_voted_for(tweet) ? 'voted' : '' %>" >
+<div id="upvote-holder-for-<%= tweet.id %>" class="upvote-holder <%= (current_user and current_user.has_voted_for(tweet)) ? 'voted' : '' %>" >
   <% if current_user %>  
     <% if current_user.has_voted_for(tweet) %>
       you voted
