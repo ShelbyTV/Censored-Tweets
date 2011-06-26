@@ -516,17 +516,19 @@ body.two-col #content {
   float: left;
   margin-right: 10px;
   width: 710px;
+  margin-top: 20px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body.two-col #content {
   overflow-x: hidden;
 }
-/* line 42, ../../app/stylesheets/screen.scss */
+/* line 45, ../../app/stylesheets/screen.scss */
 body.two-col #sidebar {
   display: inline;
   float: left;
   margin-right: 0;
   width: 230px;
+  margin-top: 20px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body.two-col #sidebar {

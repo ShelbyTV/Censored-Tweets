@@ -38,8 +38,14 @@ form.bp {
 body.two-col {
   #container { @include container;}
   #header, #footer { @include column($blueprint-grid-columns); }
-  #content { @include column(18); } 
-  #sidebar { @include column(6, true); }
+  #content { 
+		@include column(18); 
+		margin-top: 20px;
+	} 
+  #sidebar { 
+		@include column(6, true); 
+		margin-top: 20px;
+	}
 }
 
 @import "partials/application";
