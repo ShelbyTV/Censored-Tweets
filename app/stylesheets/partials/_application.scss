@@ -8,32 +8,21 @@ body.bp {
 	#header {
 		background-color: $primary-bg;
 		#welcome-user {
-			margin-left: 20px;
+
 		}
-		.header-logo{ margin: 20px; }
+		.header-logo{ }
 		.header-text{ 
-			margin-top: 40px;
-			margin-right: 40px;
-			float: right;
+
 		}
 	}
 	
-	#content {
-		width: 650px;
-		margin: 20px;
-	}
-	
-	#sidebar {
-		float: right;
-		width: 230px;
-		margin-right: 20px;
-		//margin-top: 200px;
-	}
+
 	
 	//common styles
 	h2 { 
 		background-color: $primary-bg; 
 		@include single-text-shadow(white, 1px, 1px, 1px);
+		span { padding-left: 10px; }
 	}
 	
 }

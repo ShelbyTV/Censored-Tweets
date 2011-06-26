@@ -1,14 +1,48 @@
 <div class="tweet" id="tweet-<%= tweet.id %>">
 
-  @<%= tweet.tweeter["screen_name"] %>
-  <%= image_tag tweet.tweeter["profile_image_url"] %>
-  <%= tweet.points %> points.
-  <%= tweet.vote_count %> votes.
-  <%= tweet.twitter_status.text %>
-  <%= render :partial => "tweets/upvote", :locals => { :tweet => tweet } %>
-	<%= image_tag('http://si0.twimg.com/images/dev/cms/intents/icons/retweet.png', :class => "intent-retweet-"+tweet.id) %>
-	<%= image_tag('http://si0.twimg.com/images/dev/cms/intents/icons/reply.png', :class => "intent-reply-"+tweet.id) %>
-	<%= image_tag('http://si0.twimg.com/images/dev/cms/intents/icons/favorite.png', :class => "intent-favorite-"+tweet.id) %>
+  <div class="tweet-body">
+    <div class="tweet-text">
+      <div class="inner">
+        <%= tweet.twitter_status.text %>
+      </div>
+    </div>
+    <div class="tweet-actions">
+      <%= render :partial => "tweets/upvote", :locals => { :tweet => tweet } %>
+      <div class="twitter-intents">
+        <%= image_tag('http://si0.twimg.com/images/dev/cms/intents/icons/retweet.png', :class => "intent-retweet-"+tweet.id) %>
+      	<%= image_tag('http://si0.twimg.com/images/dev/cms/intents/icons/reply.png', :class => "intent-reply-"+tweet.id) %>
+      	<%= image_tag('http://si0.twimg.com/images/dev/cms/intents/icons/favorite.png', :class => "intent-favorite-"+tweet.id) %>
+      </div>
+    </div>
+  </div>
+  
+  <div class="tweeter">
+    <%= image_tag('tail.png', :class => "tail") %>
+
+    <div class="user">
+      <div class="user-image">
+        <%= image_tag tweet.tweeter["profile_image_url"] %>
+      </div>
+      <div class="user-info">
+        <%= tweet.tweeter["name"] %> | 
+        @<%= tweet.tweeter["screen_name"] %>
+        <br />
+        <span class="time">
+          <%= time_ago_in_words(tweet.twitter_status.status_created_at) %> ago
+        </span>
+      </div>
+    </div>
+    
+    <div class="scores">
+      <div class="inner">
+        <%= tweet.points %> points<br />
+        <%= tweet.vote_count %> votes
+      </div>
+    </div>
+  
+  </div>
+  
+
 	
 </div>
 

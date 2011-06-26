@@ -1,14 +1,15 @@
 <div id="content">
   <% if @winner %>
-    <h2>#censoredtweet of the day</h2>
+    <h2><span>#censoredtweet of the day</span></h2>
     <%= render :partial => "winners/show", %>
 
     <hr />
   <% end -%>
 
-  <h2>current top #censoredtweet</h2>
-
-  <%= render @tweets %>
+  <div class="tweets">
+    <h2><span>current top #censoredtweet</span></h2>
+    <%= render @tweets %>
+  </div>
 </div>
 
 <div id="sidebar">
