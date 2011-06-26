@@ -549,19 +549,19 @@ body.bp #sidebar {
 }
 
 /* line 1, ../../app/stylesheets/partials/_henron.scss */
-#content {
+#content.head2head {
   height: 600px;
 }
 /* line 3, ../../app/stylesheets/partials/_henron.scss */
-#content #tweet_1 {
+#content.head2head #tweet_1 {
   left: 155px;
 }
 /* line 6, ../../app/stylesheets/partials/_henron.scss */
-#content #tweet_2 {
+#content.head2head #tweet_2 {
   right: 155px;
 }
 /* line 9, ../../app/stylesheets/partials/_henron.scss */
-#content #versus {
+#content.head2head #versus {
   position: absolute;
   width: 75px;
   height: 72px;
