@@ -537,9 +537,24 @@ body.two-col #sidebar {
 body.bp {
   background-color: #141414;
 }
-/* line 3, ../../app/stylesheets/partials/_application.scss */
+/* line 4, ../../app/stylesheets/partials/_application.scss */
 body.bp #container {
   background-image: url("/images/bg.png");
+}
+/* line 9, ../../app/stylesheets/partials/_application.scss */
+body.bp #header #welcome-user {
+  margin-left: 20px;
+}
+/* line 14, ../../app/stylesheets/partials/_application.scss */
+body.bp #content {
+  width: 650px;
+  margin: 20px;
+}
+/* line 19, ../../app/stylesheets/partials/_application.scss */
+body.bp #sidebar {
+  float: right;
+  width: 230px;
+  margin-right: 20px;
 }
 
 /* line 1, ../../app/stylesheets/partials/_henron.scss */

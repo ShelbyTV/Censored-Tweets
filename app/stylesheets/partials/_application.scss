@@ -1,6 +1,25 @@
 body.bp {
 	background-color: $page-bg;
+	
 	#container {
 		background-image: url("/images/bg.png");
+	}
+	
+	#header {
+		#welcome-user {
+			margin-left: 20px;
+		}
+	}
+	
+	#content {
+		width: 650px;
+		margin: 20px;
+	}
+	
+	#sidebar {
+		float: right;
+		width: 230px;
+		margin-right: 20px;
+		//margin-top: 200px;
 	}
 }
