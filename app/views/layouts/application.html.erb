@@ -27,8 +27,13 @@
 	        <%= current_user.points %> points |
 	        <%= current_user.votes_received %> votes received |
 					<%= link_to 'signout', '/signout' %>
-	      <% else %>  
-	        <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
+	      <% else %>
+	        <%= link_to "/auth/twitter" do %>						
+						<span class="signin">
+							Sign in with Twitter
+							<%= image_tag 'http://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png' %>
+						</span>
+					<% end %>
 	      <% end %>
 			</div>
 			
