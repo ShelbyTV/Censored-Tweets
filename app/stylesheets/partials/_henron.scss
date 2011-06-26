@@ -12,7 +12,7 @@
 			width: 75px;
 			height: 72px;
 			left: 47%;
-			top: 340px;
+			top: 325px;
 			background-image: url("/images/vs.png");
 		}
 	}
@@ -26,7 +26,8 @@
 		background: #deeff0;
 		padding: 5px;	
 		@include box-shadow(rgba(black, 0.4) 0 0 15px, rgba(green, 0.2) 0 0 3px 0px inset);
-		.tweet-text{
+		.tweet{
+			width:350px;
 			font-size: 22px;
 		}	
 		
