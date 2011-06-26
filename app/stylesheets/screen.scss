@@ -1,51 +1,43 @@
-@import "compass/reset";
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
 
-#versus {
-	position:absolute;
-	left: 48%;
-	top: 148px;
-	font-size: 30px;
-}
-#tweet_1 { 
-	position: absolute;
-	left: 10%;
-	width: 30%;
-	margin: 20px;
-	padding: 10px;
-	background: lightBlue;
-}
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
 
-#tweet_2 {
-	position: absolute; 
-	right: 10%;
-	width: 30%;
-	margin: 20px;
-	padding: 10px;
-	background: lightBlue;
-}
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
 
-.avatar {
-	width: 48px;
-	margin-right: 10px;
-	position: relative;
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding";
+
+// To generate css equivalent to the blueprint css but with your
+// configuration applied, uncomment:
+// @include blueprint
+
+// If you are doing a lot of stylesheet concatenation, it is suggested
+// that you scope your blueprint styles, so that you can better control
+// what pages use blueprint when stylesheets are concatenated together.
+body.bp {
+  @include blueprint-typography(true);
+  @include blueprint-utilities;
+  @include blueprint-debug;
+  @include blueprint-interaction;
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
 }
 
-.tweet {
-	position: relative;
-	margin:20px 10px;
-	
+form.bp {
+  @include blueprint-form;
+  // You'll probably want to remove the scaffolding once you start styling your site.
+  @include blueprint-scaffolding; }
+
+// Page layout can be done using mixins applied to your semantic classes and IDs:
+body.two-col {
+  #container { @include container; }
+  #header, #footer { @include column($blueprint-grid-columns); }
+  #content { @include column(18); } 
+  #sidebar { @include column(6, true); }
 }
 
-.tweet .tweet-text{
-	position: absolute;
-}
-
-.name {
-	font-size: 20px;
-	text-align: center;
-}
-
-.vote {
-	margin: 10px 0px;
-	text-align: center;
-}
+@import "partials/application";
+@import "partials/henron";

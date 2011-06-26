@@ -24,7 +24,7 @@ gem "grackle" 		# twitter
 #
 # ---------- CSS
 #
-gem "compass"
+gem "compass", ">= 0.11.1"
 gem "sass"
 
 #

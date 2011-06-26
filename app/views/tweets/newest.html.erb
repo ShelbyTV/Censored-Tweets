@@ -1,11 +1,11 @@
-<% if current_user %>  
-  Welcome, <%= current_user.name %>!  
-<% else %>  
-  <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
-<% end %>
+<div id="content">
 
+  <h1>Newest Censored Tweets</h1>
 
-<h1>Newest Censored Tweets</h1>
+  <%= render @tweets %>
 
-<%= render @tweets %>
+</div>
 
+<div id="sidebar">
+  the sidebar is here
+</div>

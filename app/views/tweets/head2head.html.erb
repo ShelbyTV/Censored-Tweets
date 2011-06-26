@@ -1,51 +1,52 @@
-<% if current_user %>  
-  Welcome, <%= current_user.name %>!  
-<% else %>  
-  <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
-<% end %>
+<div id="content">
+
+  <h1>Two Tweets, **** to Head</h1>
 
 
-<h1>Two Tweets, **** to Head</h1>
+  <div id="tweet_1">
+    <% if @tweets[0] %>
+    	<div class="name">
+    		@<%= @tweets[0].tweeter["screen_name"] %>		
+    	</div>
+    	<div class="tweet">
+    		<%= image_tag @tweets[0].tweeter["profile_image_url"], :class=> "avatar"%>
+    		<span class="tweet-text">
+    			<%= @tweets[0].twitter_status.text %>	
+    		</span>
+    	</div>
+    	<div class="vote">
+    		<%= render :partial => "tweets/upvote", :locals => { :tweet => @tweets[0], :not_remote => true } %>
+    	</div>
+    <% else %>
+      You've voted on everything, sorry
+    <% end %>
+  </div>
 
+  <div id="versus">
+  	VS.
+  </div>
 
-<div id="tweet_1">
-  <% if @tweets[0] %>
-  	<div class="name">
-  		@<%= @tweets[0].tweeter["screen_name"] %>		
-  	</div>
-  	<div class="tweet">
-  		<%= image_tag @tweets[0].tweeter["profile_image_url"], :class=> "avatar"%>
-  		<span class="tweet-text">
-  			<%= @tweets[0].twitter_status.text %>	
-  		</span>
-  	</div>
-  	<div class="vote">
-  		<%= render :partial => "tweets/upvote", :locals => { :tweet => @tweets[0], :not_remote => true } %>
-  	</div>
-  <% else %>
-    You've voted on everything, sorry
-  <% end %>
+  <div id="tweet_2">
+    <% if @tweets[1] %>
+    	<div class="name">
+    		@<%= @tweets[1].tweeter["screen_name"] %>		
+    	</div>
+    	<div class="tweet">
+    		<%= image_tag @tweets[1].tweeter["profile_image_url"], :class=> "avatar"%>
+    		<span class="tweet-text">
+    			<%= @tweets[1].twitter_status.text %>			
+    		</span>
+    	</div>
+    	<div class="vote">
+    		<%= render :partial => "tweets/upvote", :locals => { :tweet => @tweets[1], :not_remote => true } %>
+    	</div>
+    <% else %>
+      You've voted on everything else.  You vote alot.  Wtf.
+    <% end %>
+  </div>
+
 </div>
 
-<div id="versus">
-	VS.
-</div>
-
-<div id="tweet_2">
-  <% if @tweets[1] %>
-  	<div class="name">
-  		@<%= @tweets[1].tweeter["screen_name"] %>		
-  	</div>
-  	<div class="tweet">
-  		<%= image_tag @tweets[1].tweeter["profile_image_url"], :class=> "avatar"%>
-  		<span class="tweet-text">
-  			<%= @tweets[1].twitter_status.text %>			
-  		</span>
-  	</div>
-  	<div class="vote">
-  		<%= render :partial => "tweets/upvote", :locals => { :tweet => @tweets[1], :not_remote => true } %>
-  	</div>
-  <% else %>
-    You've voted on everything else.  You vote alot.  Wtf.
-  <% end %>
+<div id="sidebar">
+  the sidebar is here
 </div>
