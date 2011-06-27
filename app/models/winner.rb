@@ -17,7 +17,7 @@ class Winner
     w = Winner.new
     w.tweet = winning_tweet
     w.tweet_points_at_win = winning_tweet.points
-    w.background_image = "/images/winner_bgs/"+BACKGROUND_IMAGES[2+rand(BACKGROUND_IMAGES.size-2)]
+    w.background_image = "/images/winner_bgs/"+BACKGROUND_IMAGES[rand(BACKGROUND_IMAGES.size)]
     w.save
     
     # 2) Reset tweets points
@@ -26,6 +26,6 @@ class Winner
     return w
   end
   
-  BACKGROUND_IMAGES = Dir.entries("public/images/winner_bgs/")
+  BACKGROUND_IMAGES = Dir.entries("public/images/winner_bgs/").select { |n| n.end_with?(".png") or n.end_with?(".jpg") }
   
 end
